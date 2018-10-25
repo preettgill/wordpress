@@ -1,0 +1,26 @@
+//add revolution slider banner in product category page
+
+<?php 
+if ( (is_product() && has_term( 'category', 'product_cat' )) ||(is_product_category ('category')) ){?>
+<?php echo do_shortcode( '[rev_slider banner]' ); ?>
+<?php } ?>
+
+
+//Using jQuery to hide default woocommerce shop breadcrumb and replace with wordpress page breadcrumb
+//Child‐Theme/script.js file to hide default breadcrumb
+
+$(document).ready(function() { $('.single_variation_wrap.woocommerce‐variation‐description:nth‐of‐type(2)').hide();
+}); 
+//Under the wordpress theme options/ Custom JS tab add code below to add wordpress page breadcrumb
+<script type="text/javascript"> jQuery (document).ready(function() { /*<![CDATA[*/
+jQuery('.archive.tax‐product_cat .fusion‐page‐title‐secondary .fusion‐breadcrumbs span:nthchild(3)').html('<a href = "../wordpress-page/"> Wordpress Page</a>'); /*]]>*/ });
+
+
+//For better SEO add category description in category pages code below addes category description and image above nested products.
+// In - /public_html/wp‐content/themes/Child‐Theme/templates/title‐bar.php
+
+<main id="main" class = "category‐desp" role="main" class="clearfix " style=""> 
+<div class="fusion‐row"> 
+<?php global $wp_query; $cat = $wp_query‐>get_queried_object(); $thumbnail_id = get_woocommerce_term_meta( $cat‐>term_id, 'thumbnail_id', true ); $image = wp_get_attachment_url( $thumbnail_id );
+if ( $image ) { echo '<img class = "category‐image‐desp" src="' . $image . '" alt="" />';
+} the_archive_description( '<div class="taxonomy‐description">', '</div>' );
