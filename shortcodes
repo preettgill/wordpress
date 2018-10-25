@@ -24,3 +24,4 @@ jQuery('.archive.tax‐product_cat .fusion‐page‐title‐secondary .fusion‐
 <?php global $wp_query; $cat = $wp_query‐>get_queried_object(); $thumbnail_id = get_woocommerce_term_meta( $cat‐>term_id, 'thumbnail_id', true ); $image = wp_get_attachment_url( $thumbnail_id );
 if ( $image ) { echo '<img class = "category‐image‐desp" src="' . $image . '" alt="" />';
 } the_archive_description( '<div class="taxonomy‐description">', '</div>' );
+?> </div> </main>
