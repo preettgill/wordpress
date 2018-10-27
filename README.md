@@ -13,3 +13,4 @@ Wordpress and woocommerce Plugins
 - WooCommerce Currency Switcher (https://wordpress.org/plugins/woocommerce-currency-switcher/)
 - WooCommerce PDF Invoices & Packing Slips (https://wordpress.org/plugins/woocommerce‐pdfinvoices‐packing‐slips/) 
 - WooCommerce Product Bundles (https://woocommerce.com/products/product‐bundles/)
+- Image Hotspot (https://codecanyon.net/item/visual-composer-addon-image-hotspot-with-tooltip/8729185)
